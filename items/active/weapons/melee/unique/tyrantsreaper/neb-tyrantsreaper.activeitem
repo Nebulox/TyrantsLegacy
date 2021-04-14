@@ -1,0 +1,104 @@
+{
+  "itemName" : "neb-tyrantsreaper",
+  "level" : 6,
+  "price" : 5000,
+  "maxStack" : 1,
+  "rarity" : "Legendary",
+  "description" : "A sword of another place, and another time. It fills you unbridled rage.",
+  "shortdescription" : "Tyrant's Reaper",
+  "tooltipKind" : "base",
+  "category" : "broadsword",
+  "twoHanded" : true,
+  "itemTags" : ["weapon","melee","broadsword"],
+
+  "inventoryIcon" : "neb-tyrantsreaper.png",
+
+  "animation" : "neb-tyrantsreaper.animation",
+  "animationParts" : {
+    "weapon" : "neb-tyrantsreaper.png",
+    "weaponFullbright" : "neb-tyrantsreaperglow.png"
+  },
+  "animationCustom" : {
+    "sounds" : {
+      "fire" : [],
+      "fire2" : [],
+      "fire3" : [],
+      "greatSlashFire" : []
+    }
+  },
+
+  "scripts" : ["/items/active/weapons/melee/meleeweapon.lua"],
+
+  "elementalType" : "fire",
+
+  "primaryAbilityType" : "broadswordcombo",
+  "primaryAbility" : {
+    "fireTime" : 0.9,
+    "baseDps" : 11.5,
+
+	"stances" : {
+      //IDLE - DEFAULT
+      "idle" : {
+        "armRotation" : 25,
+        "weaponRotation" : 40,
+        "twoHanded" : false,
+		
+        "allowRotate" : false,
+        "allowFlip" : true,
+		"aimAngle" : 0
+      }
+	}
+  },
+  
+  "altAbility" : {
+    "name" : "Hellfire Blitz",
+    "scripts" : ["/items/active/weapons/melee/abilities/broadsword/neb-greatslash/neb-greatslash.lua"],
+    "class" : "NebGreatSlash",
+
+    "cooldownTime" : 0.5,
+	
+    "baseDps" : 13,
+	
+	"fireTime" : 0.01,
+	"fireOffset" : [7.25, 3.5],
+	
+	"projectileType" : "nebtyrantgreatslash",
+    "projectileParameters" : {
+      "damageKind" : "firebroadsword",
+      "statusEffects" : [ ]
+    },
+
+    "flipMovementParameters" : {
+      "collisionPoly" : [ [-2.0, -1.0], [-1.0, -2.0], [1.0, -2.0], [2.0, -1.0], [2.0, 1.0], [1.0, 2.0], [-1.0, 2.0], [-2.0, 1.0] ]
+    },
+
+    "energyUsage" : 200.0,
+    "rotations" : 2.5,
+    "rotationTime" : 0.175,
+
+    "jumpVelocity" : [0, 100],
+    "jumpDuration" : 0.1,
+
+    "stances" : {
+      "windup" : {
+        "duration" : 0.2,
+        "armRotation" : 30,
+        "weaponRotation" : 0,
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : true
+      },
+      "flip" : {
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      }
+    }
+  },
+
+  "builder" : "/items/buildscripts/buildunrandweapon.lua"
+}

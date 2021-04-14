@@ -1,0 +1,19 @@
+{
+  "kind" : "nebtyrantgreatslashtrail",
+  "definition" : {
+    "type" : "textured",
+    "image" : "/particles/nebtyrantgreatslashtrail/nebtyrantgreatslashtrail.png",
+    "position" : [0, 0],
+    "initialVelocity" : [0, 0],
+    "finalVelocity" : [0, 0],
+    "approach" : [0, 0],
+    "fade" : 0.5,
+    "destructionAction" : "fade",
+    "destructionTime" : 0.5,
+    "size" : 1,
+    "timeToLive" : 0.2,
+    "fullbright" : true,
+    "collidesForeground" : false,
+    "variance" : {}
+  }
+}
