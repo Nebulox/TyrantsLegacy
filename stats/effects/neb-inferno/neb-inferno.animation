@@ -1,0 +1,32 @@
+{
+  "particleEmitters" : {
+    "flames" : {
+      "enabled" : true,
+      "emissionRate" : 7.0,
+      "particles" : [
+        {
+          "particle" : "burningdust"
+        }
+      ]
+    },
+    "smoke" : {
+      "enabled" : true,
+      "emissionRate" : 7.0,
+      "particles" : [
+        { "particle" : "dust2" },
+        { "particle" : "dust2front" }
+      ]
+    }
+  },
+  "lights" : {
+    "glow" : {
+      "active" : true,
+      "position" : [0, 0],
+      "color" : [191, 103, 2]
+    }
+  },
+  "sounds" : {
+    "burn" : [ "/sfx/projectiles/flame_burning.ogg" ],
+    "sizzle" : [ "/sfx/projectiles/flame_burn.ogg" ]
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "projectileName" : "nebtyrantgreatslash",
+  "physics" : "illusion",
+  "bounces" : -1,
+  "image" : "nebtyrantgreatslash.png",
+  "animationCycle" : 1.0,
+  "timeToLive" : 0.1,
+  "frameNumber" : 1,
+  "power" : 1,
+  "speed" : 0,
+  "piercing" : true,
+  "supportsProcessing" : true,
+  "damagePoly" : [ [-55, 0], [-40, -40], [0, -55], [40, -40], [55, 0], [40, 40], [0, 55], [-40, 40] ],
+  "emitters" : [],
+  "statusEffects" : [],
+  "fullbright" : true,
+  "damageKind" : "firebroadsword",
+  "renderLayer" : "Monster-1",
+  
+  "actionOnReap" : [
+    {
+      "action" : "sound",
+      "options" : ["/sfx/melee/swing_broadsword_fire1.ogg", "/sfx/melee/swing_broadsword_fire2.ogg", "/sfx/melee/swing_broadsword_fire3.ogg" ]
+    }
+  ],
+  
+  "scripts" : [ "nebtyrantgreatslash.lua" ]
+}

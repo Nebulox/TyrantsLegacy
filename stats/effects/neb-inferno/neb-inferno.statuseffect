@@ -1,0 +1,24 @@
+{
+  "name" : "neb-inferno",
+  "blockingStat" : "fireStatusImmunity",
+
+  "effectConfig" : {
+    "minMaxHealth" : 5,
+    "projectileType" : "nebtyrantlifesteal",
+    "projectileCount" : 1,
+	"directPath" : false,
+	
+    "tickDamagePercentage" : 0.02,
+    "tickTime" : 0.75
+  },
+  "defaultDuration" : 3,
+
+  "scripts" : [
+    "neb-inferno.lua"
+  ],
+
+  "animationConfig" : "neb-inferno.animation",
+
+  "label" : "Inferno",
+  "icon" : "/interface/statuses/fire.png"
+}

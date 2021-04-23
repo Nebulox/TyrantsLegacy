@@ -13,7 +13,6 @@ function NebGreatSlash:update(dt, fireMode, shiftHeld)
   WeaponAbility.update(self, dt, fireMode, shiftHeld)
 
   self.cooldownTimer = math.max(0, self.cooldownTimer - self.dt)
-  self.fireTimer = 0
 
   if not self.weapon.currentAbility
      and self.cooldownTimer == 0
@@ -49,6 +48,7 @@ function NebGreatSlash:flip(grounded)
 
   self.flipTime = self.rotations * self.rotationTime
   self.flipTimer = 0
+  self.fireTimer = 0
 
   self.jumpTimer = 0
   if grounded then
@@ -59,19 +59,30 @@ function NebGreatSlash:flip(grounded)
   local params = sb.jsonMerge(self.projectileParameters, {})
   params.power = (self.baseDps * self.fireTime) * (self.baseDamageMultiplier or 1.0) * config.getParameter("damageLevelMultiplier")
   params.powerMultiplier = activeItem.ownerPowerMultiplier()
-  
-  local firePosition = vec2.add(mcontroller.position(), activeItem.handPosition(self.fireOffset or {0, 0}))
-  local aimVec = vec2.rotate({1, 0}, self.weapon.aimAngle)
-  aimVec[1] = aimVec[1] * mcontroller.facingDirection()
 
-  while self.flipTimer < self.flipTime do
+  local spinSpeedFactor
+  while self.flipTimer < (self.flipTime + self.jumpDuration) do
+    local firePosition = vec2.add(mcontroller.position(), vec2.mul(vec2.rotate({1,0}, mcontroller.rotation() * mcontroller.facingDirection()), activeItem.handPosition(self.fireOffset or {0, 0})))
+    local aimVec = vec2.rotate({1, 0}, mcontroller.rotation())
+    --aimVec[1] = aimVec[1] * mcontroller.facingDirection()
+	
+	params.periodicActions = {
+	  {
+        time = 0,
+        ["repeat"] = false,
+        action = "particle",
+        rotate = true,
+        specification = "nebtyrantgreatslashtrail" .. (mcontroller.facingDirection() == -1 and "flipped" or "")
+      }
+    }
+ 	
     --Prevent movement
     mcontroller.setVelocity({0, 0})
 	
 	--Decay timers
-    spinSpeedFactor = math.sin(self.flipTimer * self.flipTime) + 0.5
+    spinSpeedFactor = math.sin(self.flipTimer * self.flipTime * 2) + 0.5
     self.flipTimer = self.flipTimer + (self.dt * spinSpeedFactor)
-	self.fireTimer = math.max(0, self.fireTimer - self.dt)
+	self.fireTimer = self.fireTimer - self.dt
 
     mcontroller.controlParameters(self.flipMovementParameters)
 
@@ -82,7 +93,7 @@ function NebGreatSlash:flip(grounded)
     end
 	
 	--Spawn trail and damaging projectiles
-	if self.fireTimer == 0 and self.jumpTimer <= 0 then
+	if self.fireTimer <= 0 and self.jumpTimer <= 0 then
 	  self.fireTimer = self.fireTime
 	  world.spawnProjectile(
         self.projectileType,

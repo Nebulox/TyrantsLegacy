@@ -1,0 +1,18 @@
+{
+  "name" : "neb-tyrantheal",
+  "effectConfig" : {
+    "healAmount" : 4,
+    "emissionRate" : 10,
+    "powerModifier" : 1.1
+  },
+  "defaultDuration" : 1,
+
+  "scripts" : [
+    "neb-tyrantheal.lua"
+  ],
+
+  "animationConfig" : "neb-tyrantheal.animation",
+
+  "label" : "Rage of the Inferno",
+  "icon" : "/interface/statuses/heal.png"
+}

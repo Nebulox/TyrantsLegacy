@@ -1,8 +1,8 @@
 {
-  "kind" : "nebtyrantgreatslashtrail",
+  "kind" : "nebtyrantgreatslashtrailflipped",
   "definition" : {
     "type" : "textured",
-    "image" : "/particles/nebtyrantgreatslashtrail/nebtyrantgreatslashtrail.png",
+    "image" : "/particles/nebtyrantgreatslashtrail/nebtyrantgreatslashtrail.png?flipx",
     "position" : [0, 0],
     "initialVelocity" : [0, 0],
     "finalVelocity" : [0, 0],

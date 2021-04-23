@@ -1,0 +1,94 @@
+{
+  "projectileName" : "nebtyrantlifesteal",
+  "physics" : "illusion",
+  "bounces" : 0,
+  "image" : "nebtyrantlifesteal.png",
+  "fullbright" : false,
+  "lightColor" : [15, 0, 0],
+  "animationCycle" : 0.4,
+  "frameNumber" : 4,
+  "periodicActions" : [
+	{
+      "time" : 0.04,
+      "repeat" : true,
+      "action" : "particle",
+      "rotate" : true,
+      "specification" : {
+		"type" : "animated",
+		"animation" : "/projectiles/status/nebtyrantlifesteal/trail.animation",
+        "position" : [-0.25, 0],
+        "layer" : "front",
+        "size" : 0.55,
+		"collidesForeground" : true,
+		"initialVelocity" : [4.0, 0.0],
+		"finalVelocity" : [0, 0],
+		"approach" : [2, 2],
+        "timeToLive" : 0.5,
+        "destructionTime" : 0.1,
+        "destructionAction" : "fade",
+        "fullbright" : true,
+		"variance" : {
+		  "size" : 0.25,
+		  "position" : [0.125, 0.0],
+		  "initialVelocity" : [4.0, 0.5],
+		  "finalVelocity" : [1.0, 0.0]
+		}
+      }
+    },
+	{
+      "time" : 0.06,
+      "repeat" : true,
+      "action" : "particle",
+      "rotate" : true,
+      "specification" : {
+		"type" : "animated",
+		"animation" : "/projectiles/status/nebtyrantlifesteal/trail2.animation",
+        "position" : [-1.0, 0],
+        "layer" : "front",
+        "size" : 0.55,
+		"collidesForeground" : true,
+		"initialVelocity" : [4.0, 0.0],
+		"finalVelocity" : [0, 0],
+		"approach" : [2, 2],
+        "timeToLive" : 0.4,
+        "destructionTime" : 0.1,
+        "destructionAction" : "fade",
+        "fullbright" : true,
+		"variance" : {
+		  "size" : 0.25,
+		  "position" : [0.125, 0.0],
+		  "initialVelocity" : [4.0, 0.5],
+		  "finalVelocity" : [1.0, 0.0]
+		}
+      }
+    }
+  ],
+  "power" : 0,
+  "speed" : 30,
+  "actionOnReap" : [
+	{
+      "action" : "projectile",
+      "type" : "nebtyrantlifestealexplosion"
+    }
+  ],
+  "emitters" : [ "barrierflames" ],
+  "onlyHitTerrain" : true,
+  
+  "renderLayer" : "ForegroundEntity",
+
+  "timeToLive" : 10,
+
+  "scripts" : ["nebtyrantlifesteal.lua"],
+  "scriptDelta" : 1,
+
+  "accelerationFactor" : 2,
+
+  "homingStartDelay" : 0.2,
+  "homingSpeed" : 65,
+  "homingForce" : 226,
+  
+  "pickupRange" : 1,
+  "snapRange" : 2.5,
+  "snapSpeed" : 150,
+  "snapForce" : 500
+}
