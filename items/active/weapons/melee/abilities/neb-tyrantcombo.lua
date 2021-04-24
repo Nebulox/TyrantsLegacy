@@ -139,9 +139,54 @@ function NebTyrantCombo:fire()
   animator.setParticleEmitterOffsetRegion(swooshKey, self.swooshOffsetRegions[self.comboStep])
   animator.burstParticleEmitter(swooshKey)
 
+  local canFire = true
+  local loopTimer = 0
+  --Set the damage area for the duration of the step
   util.wait(stance.duration, function()
-    local damageArea = partDamageArea("swoosh")
-    self.weapon:setDamage(self.stepDamageConfig[self.comboStep], damageArea)
+	local damageArea = partDamageArea("swoosh")
+	self.weapon:setDamage(self.stepDamageConfig[self.comboStep], damageArea)
+	
+    --Optionally fire a projectile
+    if stance.projectile then
+	  local firePosition = vec2.add(mcontroller.position(), activeItem.handPosition(self.firePoint or {0,0}))
+	  local params = stance.projectileParameters or {}
+	  params.power = stance.projectileDamage * config.getParameter("damageLevelMultiplier")
+	  params.powerMultiplier = activeItem.ownerPowerMultiplier()
+	  params.speed = util.randomInRange(params.speed)
+		
+	  world.debugPoint(firePosition, "red")
+		
+	  if not world.lineTileCollision(mcontroller.position(), firePosition) and canFire and status.overConsumeResource("energy", stance.energyUsage or 0) then
+		for i = 1, (stance.projectileCount or 1) do
+		  local aimVector = vec2.rotate({1, 0}, self.weapon.aimAngle + sb.nrand(stance.projectileInaccuracy or 0, 0) + (stance.projectileAimAngleOffset or 0))
+		  aimVector[1] = aimVector[1] * mcontroller.facingDirection()
+			
+		  world.spawnProjectile(
+			stance.projectile,
+			firePosition,
+			activeItem.ownerEntityId(),
+			aimVector,
+			false,
+			params
+	  	  )
+	    end
+	    canFire = false
+	  end
+		
+	  --Optionally loop projectile firing during the stance
+	  if stance.fireTime and not canFire then
+	    loopTimer = math.min(stance.fireTime, loopTimer + self.dt)
+		if loopTimer >= stance.fireTime then
+		  loopTimer = 0
+		  canFire = true
+		end
+	  end
+	end
+	  
+	--Optionally freeze the player in place if so configured
+	if stance.freezePlayer then
+	  mcontroller.setVelocity({0,0})
+	end
   end)
 
   --If this wasn't the last combo step, go to next step

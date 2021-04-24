@@ -9,7 +9,11 @@
 	"directPath" : false,
 	
     "tickDamagePercentage" : 0.02,
-    "tickTime" : 0.75
+    "tickTime" : 0.75,
+	"damageKind" : "firebroadsword",
+	
+	"spreadRadius" : 3,
+	"spreadEffect" : "neb-tyrantheal"
   },
   "defaultDuration" : 3,
 

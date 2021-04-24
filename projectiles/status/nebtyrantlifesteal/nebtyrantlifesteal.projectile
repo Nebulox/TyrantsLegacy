@@ -9,7 +9,7 @@
   "frameNumber" : 4,
   "periodicActions" : [
 	{
-      "time" : 0.04,
+      "time" : 0.03,
       "repeat" : true,
       "action" : "particle",
       "rotate" : true,
@@ -18,7 +18,7 @@
 		"animation" : "/projectiles/status/nebtyrantlifesteal/trail.animation",
         "position" : [-0.25, 0],
         "layer" : "front",
-        "size" : 0.55,
+        "size" : 0.65,
 		"collidesForeground" : true,
 		"initialVelocity" : [4.0, 0.0],
 		"finalVelocity" : [0, 0],
@@ -36,7 +36,7 @@
       }
     },
 	{
-      "time" : 0.06,
+      "time" : 0.03,
       "repeat" : true,
       "action" : "particle",
       "rotate" : true,
@@ -45,7 +45,7 @@
 		"animation" : "/projectiles/status/nebtyrantlifesteal/trail2.animation",
         "position" : [-1.0, 0],
         "layer" : "front",
-        "size" : 0.55,
+        "size" : 0.65,
 		"collidesForeground" : true,
 		"initialVelocity" : [4.0, 0.0],
 		"finalVelocity" : [0, 0],
@@ -71,7 +71,7 @@
       "type" : "nebtyrantlifestealexplosion"
     }
   ],
-  "emitters" : [ "barrierflames" ],
+  "emitters" : [ "fireswoosh" ],
   "onlyHitTerrain" : true,
   
   "renderLayer" : "ForegroundEntity",

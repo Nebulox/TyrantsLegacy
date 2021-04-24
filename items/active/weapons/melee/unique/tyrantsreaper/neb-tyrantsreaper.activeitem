@@ -47,6 +47,8 @@
     "fireTime" : 0.95,
     "baseDps" : 11,
 	
+	"firePoint" : [0, 0],
+	
     "damageConfig" : {
       "damageSourceKind" : "firebroadsword",
       "statusEffects" : [ "neb-inferno" ],
@@ -159,7 +161,16 @@
         "twoHanded" : true,
 
         "allowRotate" : false,
-        "allowFlip" : false
+        "allowFlip" : false,
+        
+        //Projectile
+        "projectile" : "nebtyrantflyingslash",
+        "projectileCount" : 1,
+        "projectileDamage" : 3,
+        "projectileParameters" : {
+	    },
+        "projectileInaccuracy" : 0,
+        "projectileAimAngleOffset" : 0
       },
       "wait1" : {
         "duration" : 0.2,
@@ -226,7 +237,16 @@
         "twoHanded" : true,
 
         "allowRotate" : false,
-        "allowFlip" : false
+        "allowFlip" : false,
+        
+        //Projectile
+        "projectile" : "nebtyrantflyingslash",
+        "projectileCount" : 1,
+        "projectileDamage" : 3,
+        "projectileParameters" : { 
+	    },
+        "projectileInaccuracy" : 0,
+        "projectileAimAngleOffset" : 0
       },
       "wait3" : {
         "duration" : 0.2,
@@ -265,7 +285,16 @@
         "twoHanded" : true,
 
         "allowRotate" : false,
-        "allowFlip" : false
+        "allowFlip" : false,
+        
+        //Projectile
+        "projectile" : "nebtyrantflyingslash",
+        "projectileCount" : 1,
+        "projectileDamage" : 3,
+        "projectileParameters" : {
+	    },
+        "projectileInaccuracy" : 0,
+        "projectileAimAngleOffset" : 0
       },
       "wait4" : {
         "duration" : 0.2,
@@ -302,7 +331,16 @@
         "twoHanded" : true,
 
         "allowRotate" : false,
-        "allowFlip" : false
+        "allowFlip" : false,
+        
+        //Projectile
+        "projectile" : "nebtyrantflyingslash",
+        "projectileCount" : 1,
+        "projectileDamage" : 3,
+        "projectileParameters" : {
+	    },
+        "projectileInaccuracy" : 0,
+        "projectileAimAngleOffset" : 0
       },
       "wait5" : {
         "duration" : 0.1,
@@ -367,7 +405,16 @@
         "twoHanded" : true,
 
         "allowRotate" : false,
-        "allowFlip" : false
+        "allowFlip" : false,
+        
+        //Projectile
+        "projectile" : "nebtyrantflyingslash",
+        "projectileCount" : 1,
+        "projectileDamage" : 3,
+        "projectileParameters" : {
+	    },
+        "projectileInaccuracy" : 0,
+        "projectileAimAngleOffset" : 0
       },
       "wait7" : {
         "duration" : 0.1,
@@ -406,7 +453,16 @@
         "twoHanded" : true,
 
         "allowRotate" : false,
-        "allowFlip" : false
+        "allowFlip" : false,
+        
+        //Projectile
+        "projectile" : "nebtyrantflyingslash",
+        "projectileCount" : 1,
+        "projectileDamage" : 3,
+        "projectileParameters" : {
+	    },
+        "projectileInaccuracy" : 0,
+        "projectileAimAngleOffset" : 0
       },
       "wait8" : {
         "duration" : 0.2,
@@ -472,7 +528,16 @@
         "twoHanded" : true,
 
         "allowRotate" : false,
-        "allowFlip" : false
+        "allowFlip" : false,
+        
+        //Projectile
+        "projectile" : "nebtyrantflyingslash",
+        "projectileCount" : 1,
+        "projectileDamage" : 3,
+        "projectileParameters" : {
+	    },
+        "projectileInaccuracy" : 0,
+        "projectileAimAngleOffset" : 0
       }
     }
   },

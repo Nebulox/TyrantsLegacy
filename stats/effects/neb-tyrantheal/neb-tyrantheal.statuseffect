@@ -1,8 +1,9 @@
 {
   "name" : "neb-tyrantheal",
   "effectConfig" : {
-    "healAmount" : 4,
+    "healAmount" : 10,
     "emissionRate" : 10,
+	
     "powerModifier" : 1.1
   },
   "defaultDuration" : 1,

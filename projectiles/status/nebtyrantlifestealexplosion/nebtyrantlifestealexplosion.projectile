@@ -1,7 +1,7 @@
 {
   "projectileName" : "nebtyrantlifestealexplosion",
   "image" : "nebtyrantlifestealexplosion.png",
-  "animationCycle" : 0.2,
+  "animationCycle" : 0.3,
   "frameNumber" : 6,
   "speed" : 0,
   "lightColor" : [15, 0, 0],
@@ -10,12 +10,15 @@
   "piercing" : true,
   "bounces" : -1,
   "flippable" : true,
+  "fullbright" : true,
   
   "statusEffects" : [
     "neb-tyrantheal"
   ],
   
   "power" : 0,
+  
+  "renderLayer" : "ForegroundEntity",
   
   "damageTeam" : { "type" : "enemy" },
   "damageKind" : "hidden"

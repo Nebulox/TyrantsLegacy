@@ -1,0 +1,25 @@
+{
+  "projectileName" : "nebtyrantflyingslash",
+  "physics" : "illusion",
+  "image" : "nebtyrantflyingslash.png",
+  "animationCycle" : 0.15,
+  "timeToLive" : 0.15,
+  "frameNumber" : 5,
+  "speed" : 35,
+  "orientationLocked" : true,
+  "damagePoly" : [ [-40, 24.5], [3.5, 24.5], [15.5, 21.5], [28.5, 15.5], [36.5, 7.5], [40.5, -1.5], [40.5, -12.5], [32.5, -24.5], [-12, -24.5] ],
+  "animationLoops" : false,
+  "piercing" : true,
+  "fullbright" : true,
+  "bounces" : -1,
+  "flippable" : true,
+  "emitters" : [ "largefireswoosh" ],
+  "damageKind" : "firebroadsword",
+  "statusEffects" : [
+    "neb-inferno"
+  ],
+  "lightColor" : [191, 103, 2],
+  "pointLight" : true,
+  "knockback" : 10,
+  "knockbackDirectional" : true
+}
