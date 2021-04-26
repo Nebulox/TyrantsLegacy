@@ -4,7 +4,7 @@
   "price" : 5000,
   "maxStack" : 1,
   "rarity" : "Legendary",
-  "description" : "A sword born of a great inferno.",
+  "description" : "An old blade from a time long forgotten. It is described to be a weapon of utmost calamitous power.",
   "shortdescription" : "Tyrant's Reaper",
   "tooltipKind" : "base",
   "category" : "broadsword",
