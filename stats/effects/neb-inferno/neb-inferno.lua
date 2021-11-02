@@ -29,6 +29,7 @@ function update(dt)
     self.musicPlaying = (effect.duration() and world.liquidAt({mcontroller.xPosition(), mcontroller.yPosition() - 1}))
     animator.playSound("sizzle", -1)
   else
+    self.musicPlaying = (effect.duration() and world.liquidAt({mcontroller.xPosition(), mcontroller.yPosition() - 1}))
     animator.stopAllSounds("sizzle")
   end
 
