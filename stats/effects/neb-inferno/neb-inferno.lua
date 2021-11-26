@@ -18,18 +18,18 @@ function init()
   script.setUpdateDelta(5)
 
   self.tickDamagePercentage = config.getParameter("tickDamagePercentage", 0.025)
-  self.tickTime =  config.getParameter("tickTime", 1)
+  self.tickTime = config.getParameter("tickTime", 1)
   self.tickTimer = self.tickTime
 end
 
 function update(dt)
   --Effects
-  animator.setParticleEmitterActive("smoke", self.musicPlaying)
-  if not self.musicPlaying then
-    self.musicPlaying = (effect.duration() and world.liquidAt({mcontroller.xPosition(), mcontroller.yPosition() - 1}))
+  animator.setParticleEmitterActive("smoke", self.submerged)
+  if not self.submerged and world.liquidAt({mcontroller.xPosition(), mcontroller.yPosition() - 1}) then
     animator.playSound("sizzle", -1)
-  else
-    self.musicPlaying = (effect.duration() and world.liquidAt({mcontroller.xPosition(), mcontroller.yPosition() - 1}))
+	self.submerged = true
+  elseif self.submerged and not world.liquidAt({mcontroller.xPosition(), mcontroller.yPosition() - 1}) then
+    self.submerged = false
     animator.stopAllSounds("sizzle")
   end
 
@@ -71,24 +71,24 @@ function update(dt)
 end
 
 function spawnProjectiles()
-	if world.entityExists(self.sourceEntity) then
-	  local projectileNumber = 0
-	  for i = 1, self.projectileCount do
-		projectileNumber = projectileNumber + 1
+  if world.entityExists(self.sourceEntity) then
+	local projectileNumber = 0
+	for i = 1, self.projectileCount do
+	  projectileNumber = projectileNumber + 1
 		
-		local aimVec = vec2.rotate({0, 1}, (360 / (config.getParameter("projectileCount") + 1) * projectileNumber) + math.random(360))
+	  local aimVec = vec2.rotate({0, 1}, (360 / (config.getParameter("projectileCount") + 1) * projectileNumber) + math.random(360))
+	  
+	  if config.getParameter("directPath", false) then
+	    aimVec = {0, 0}
+	  end
 		
-		if config.getParameter("directPath", false) then
-		  aimVec = {0, 0}
-		end
-		
-		local projectileId = world.spawnProjectile(config.getParameter("projectileType"), mcontroller.position(), nil, aimVec, false)
-		if projectileId then
-		  world.sendEntityMessage(projectileId, "setTargetEntity", self.sourceEntity)
-		  self.projectileSpawned = true
-		end
+	  local projectileId = world.spawnProjectile(config.getParameter("projectileType"), mcontroller.position(), nil, aimVec, false)
+	  if projectileId then
+	    world.sendEntityMessage(projectileId, "setTargetEntity", self.sourceEntity)
+	    self.projectileSpawned = true
 	  end
 	end
+  end
 end
 
 function uninit()
