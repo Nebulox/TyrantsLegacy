@@ -13,22 +13,22 @@
   "femaleFrames" : "head.png",
   "mask" : "mask.png",
 
-  "level" : 7,
+  "level" : 8,
   "leveledStatusEffects" : [
     {
       "levelFunction" : "standardArmorLevelPowerMultiplierMultiplier",
       "stat" : "powerMultiplier",
-      "baseMultiplier" : 1.15
+      "baseMultiplier" : 1.2
     },
     {
       "levelFunction" : "standardArmorLevelProtectionMultiplier",
       "stat" : "protection",
-      "amount" : 0.3
+      "amount" : 0.5
     },
     {
       "levelFunction" : "standardArmorLevelMaxHealthMultiplier",
       "stat" : "maxHealth",
-      "amount" : 3
+      "amount" : 5
     }
   ],
 
