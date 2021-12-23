@@ -45,7 +45,7 @@
     "class" : "NebTyrantCombo",
 	
     "fireTime" : 0.95,
-    "baseDps" : 12,
+    "baseDps" : 12.5,
 	
 	"firePoint" : [0, 0],
 	
