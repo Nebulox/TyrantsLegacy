@@ -20,6 +20,7 @@
       "stat" : "powerMultiplier",
       "baseMultiplier" : 1.18
     },
+	{
       "levelFunction" : "acceleratorArmorLevelProtectionMultiplier",
       "stat" : "protection",
       "amount" : 0.31
