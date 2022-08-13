@@ -4,7 +4,7 @@
   "price" : 5000,
   "maxStack" : 1,
   "rarity" : "Legendary",
-  "description" : "An old blade from a time long forgotten. In the little information that is found of said blade, it is described as a weapon of truly calamitous power.",
+  "description" : "A weapon of truly calamitous power.",
   "shortdescription" : "Tyrant's Reaper",
   "tooltipKind" : "base",
   "category" : "broadsword",

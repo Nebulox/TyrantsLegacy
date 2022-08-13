@@ -1,0 +1,9 @@
+{
+  "name" : "neb-gerald",
+  "category" : "neb-gerald",
+  "type" : "body",
+
+  "frames" : {
+    "body" : "body.png"
+  }
+}

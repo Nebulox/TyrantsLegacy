@@ -12,14 +12,10 @@
   "flippable" : true,
   "fullbright" : true,
   
-  "statusEffects" : [
-    "neb-tyrantheal"
-  ],
-  
   "power" : 0,
   
   "renderLayer" : "ForegroundEntity",
   
   "damageTeam" : { "type" : "enemy" },
-  "damageKind" : "hidden"
+  "damageType" : "status"
 }

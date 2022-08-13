@@ -34,6 +34,7 @@ function update(dt)
       local targetDist = vec2.mag(toTarget)
       if targetDist <= self.pickupRange then
         projectile.die()
+		world.sendEntityMessage(self.targetEntity, "applyStatusEffect", config.getParameter("effectOverwrite", "neb-tyrantheal"))
       elseif targetDist <= self.snapRange then
         mcontroller.approachVelocity(vec2.mul(vec2.div(toTarget, targetDist), self.snapSpeed), self.snapForce)
 	  else
