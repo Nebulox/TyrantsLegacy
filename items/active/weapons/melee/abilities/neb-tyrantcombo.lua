@@ -147,7 +147,7 @@ function NebTyrantCombo:fire()
 	self.weapon:setDamage(self.stepDamageConfig[self.comboStep], damageArea)
 	
     --Optionally fire a projectile
-    if stance.projectile then
+    if stance.projectile and status.statusProperty("neb-tyrantssword", 0) == 1 then
 	  local firePosition = vec2.add(mcontroller.position(), activeItem.handPosition(self.firePoint or {0,0}))
 	  local params = stance.projectileParameters or {}
 	  params.power = stance.projectileDamage * config.getParameter("damageLevelMultiplier")

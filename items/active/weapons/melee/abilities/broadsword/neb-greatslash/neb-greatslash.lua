@@ -60,6 +60,8 @@ function NebGreatSlash:flip(grounded)
   params.power = (self.baseDps * self.fireTime) * (self.baseDamageMultiplier or 1.0) * config.getParameter("damageLevelMultiplier")
   params.powerMultiplier = activeItem.ownerPowerMultiplier()
 
+  local canFire = true
+  local loopTimer = 0
   local spinSpeedFactor
   while self.flipTimer < (self.flipTime + self.jumpDuration) do
     local firePosition = vec2.add(mcontroller.position(), vec2.mul(vec2.rotate({1,0}, mcontroller.rotation() * mcontroller.facingDirection()), activeItem.handPosition(self.fireOffset or {0, 0})))
@@ -75,6 +77,40 @@ function NebGreatSlash:flip(grounded)
         specification = "nebtyrantgreatslashtrail" .. (mcontroller.facingDirection() == -1 and "flipped" or "")
       }
     }
+	
+	if status.statusProperty("neb-tyrantssword", 0) == 1 then
+	  local firePosition = mcontroller.position()
+	  local params = self.setProjectileParameters or {}
+	  params.power = self.projectileDamage * config.getParameter("damageLevelMultiplier") * self.setFireTime
+	  params.powerMultiplier = activeItem.ownerPowerMultiplier()
+	  params.speed = util.randomInRange(params.speed)
+		
+	  world.debugPoint(firePosition, "red")
+		
+	  if not world.lineTileCollision(mcontroller.position(), firePosition) and canFire then
+		for i = 1, (self.projectileCount or 1) do
+		  local aimVector = vec2.rotate({1, 0}, sb.nrand(math.pi, 0))
+			
+		  world.spawnProjectile(
+			self.setProjectileType,
+			firePosition,
+			activeItem.ownerEntityId(),
+			aimVector,
+			false,
+			params
+	  	  )
+	    end
+	    canFire = false
+	  end
+	  
+	  if not canFire then
+	    loopTimer = math.min(self.setFireTime, loopTimer + self.dt)
+		if loopTimer >= self.setFireTime then
+		  loopTimer = 0
+		  canFire = true
+		end
+	  end
+	end
  	
     --Prevent movement
     mcontroller.setVelocity({0, 0})

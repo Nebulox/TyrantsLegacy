@@ -559,6 +559,10 @@
       "damageKind" : "firebroadsword",
       "statusEffects" : [ "neb-inferno" ]
     },
+	
+	"setProjectileType" : "nebtyrantflyingslash",
+	"setFireTime" : 0.01,
+	"projectileDamage" : 5,
 
     "flipMovementParameters" : {
       "collisionPoly" : [ [-2.0, -1.0], [-1.0, -2.0], [1.0, -2.0], [2.0, -1.0], [2.0, 1.0], [1.0, 2.0], [-1.0, 2.0], [-2.0, 1.0] ]

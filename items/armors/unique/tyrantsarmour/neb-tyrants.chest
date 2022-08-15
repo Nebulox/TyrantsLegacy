@@ -21,7 +21,7 @@
     "frontSleeve" : "fsleeve.png"
   },
 
-  "level" : 7,
+  "level" : 6,
   "leveledStatusEffects" : [
     {
       "levelFunction" : "manipulatorArmorLevelPowerMultiplierMultiplier",
@@ -43,6 +43,10 @@
       "stat" : "maxHealth",
       "amount" : 10.42854
     }
+  ],
+  
+  "statusEffects" : [
+	"neb-tyrantssword-chest"
   ],
 
   "itemTags" : [ "tier7armour", "nebulox" ],

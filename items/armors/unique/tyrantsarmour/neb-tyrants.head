@@ -13,7 +13,7 @@
   "femaleFrames" : "head.png",
   "mask" : "mask.png",
 
-  "level" : 7,
+  "level" : 6,
   "leveledStatusEffects" : [
     {
       "levelFunction" : "manipulatorArmorLevelPowerMultiplierMultiplier",
@@ -35,6 +35,10 @@
       "stat" : "maxHealth",
       "amount" : 6
     }
+  ],
+  
+  "statusEffects" : [
+	"neb-tyrantssword-head"
   ],
 
   "itemTags" : [ "tier7armour", "nebulox" ],

@@ -12,7 +12,7 @@
   "maleFrames" : "pants.png",
   "femaleFrames" : "pants.png",
 
-  "level" : 7,
+  "level" : 6,
   "leveledStatusEffects" : [
     {
       "levelFunction" : "manipulatorArmorLevelPowerMultiplierMultiplier",
@@ -34,6 +34,10 @@
       "stat" : "maxHealth",
       "amount" : 7.14289
     }
+  ],
+  
+  "statusEffects" : [
+	"neb-tyrantssword-legs"
   ],
 
   "itemTags" : [ "tier7armour", "nebulox" ],

@@ -1,0 +1,11 @@
+{
+  "name" : "neb-tyrantssword-chest",
+  "effectConfig" : {
+	"gearSetType" : "neb-tyrantssword"
+  },
+  "defaultDuration" : 0,
+
+  "scripts" : [
+    "neb-tyrantssword.lua"
+  ]
+}
