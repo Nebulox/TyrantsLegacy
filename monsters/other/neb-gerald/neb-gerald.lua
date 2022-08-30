@@ -1,4 +1,5 @@
 function init()
+  monster.setUniqueId(config.getParameter("uniqueId"))
 end
 
 function update(dt)
@@ -10,7 +11,7 @@ function update(dt)
 end
 
 function die()
-  local doors = world.objectQuery(entity.position(), 100)
+  local doors = world.entityQuery(entity.position(), 100)
   for _, door in ipairs(doors) do
     world.sendEntityMessage(door, "openDoor")
   end

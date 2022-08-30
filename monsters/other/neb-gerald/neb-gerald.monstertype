@@ -12,6 +12,7 @@
 
   "baseParameters" : {
     "aggressive" : false,
+    "uniqueId": "neb-gerald",
 	
     "scripts" : [
       "/monsters/other/neb-gerald/neb-gerald.lua"
@@ -76,7 +77,7 @@
           "baseValue" : 0.0
         },
         "healthRegen" : {
-          "baseValue" : 350
+          "baseValue" : 175
         },
         "powerMultiplier" : {
           "baseValue" : 1.0

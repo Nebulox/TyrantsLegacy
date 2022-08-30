@@ -24,7 +24,7 @@
   ],
   "scriptDelta" : 5,
   
-  "spawnableItem" : "neb-tyrantsreaper",
+  "uniqueId": "neb-tyrantsword",
 
   "animation" : "neb-tyrantswordaltar.animation",
   "animationParts" : {

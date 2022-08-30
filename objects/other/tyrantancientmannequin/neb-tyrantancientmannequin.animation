@@ -1,97 +1,16 @@
 {
-  "partTagDefaults" : {
-    "back" : {
-      "frameSet" : "",
-      "directives" : ""
-    },
-    "backSleeve" : {
-      "frameSet" : "",
-      "directives" : ""
-    },
-    "legs" : {
-      "frameSet" : "",
-      "directives" : ""
-    },
-    "body" : {
-      "frameSet" : "",
-      "directives" : ""
-    },
-    "head" : {
-      "frameSet" : "",
-      "directives" : ""
-    },
-    "frontSleeve" : {
-      "frameSet" : "",
-      "directives" : ""
-    }
-  },
-
   "animatedParts" : {
     "stateTypes" : {
-      "head" : {
-        "default" : "hide",
+      "state" : {
+        "default" : "full",
         "states" : {
-          "show" : {},
-          "hide" : {}
-        }
-      },
-      "chest" : {
-        "default" : "hide",
-        "states" : {
-          "show" : {},
-          "hide" : {}
-        }
-      },
-      "legs" : {
-        "default" : "hide",
-        "states" : {
-          "show" : {},
-          "hide" : {}
-        }
-      },
-      "back" : {
-        "default" : "hide",
-        "states" : {
-          "show" : {},
-          "hide" : {}
+          "full" : {},
+          "looted" : {}
         }
       }
     },
 
     "parts" : {
-      "standBase" : {
-        "properties" : {
-          "centered" : false,
-          "offset" : [0, 0],
-          "zLevel" : 0,
-          "image" : "standBase.png"
-        }
-      },
-      "dummyBackArm" : {
-        "properties" : {
-          "centered" : false,
-          "offset" : [0, 0.125],
-          "zLevel" : 1,
-          "image" : "humanoid/dummybackarm.png"
-        }
-      },
-      "back" : {
-        "properties" : {
-          "centered" : false,
-          "offset" : [0, 0.125],
-          "zLevel" : 2
-        },
-
-        "partStates" : {
-          "back" : {
-            "show" : {
-              "properties" : {
-                "image" : "<frameSet>:idle.1<directives>"
-              }
-            }
-          }
-        }
-      },
       "backSleeve" : {
         "properties" : {
           "centered" : false,
@@ -100,102 +19,15 @@
         },
 
         "partStates" : {
-          "chest" : {
-            "show" : {
+          "state" : {
+            "full" : {
               "properties" : {
-                "image" : "<frameSet>:idle.1<directives>"
+                "image" : "neb-tyrantancientmannequin.png:full"
               }
-            }
-          }
-        }
-      },
-      "dummyHead" : {
-        "properties" : {
-          "centered" : false,
-          "offset" : [0, 0.125],
-          "zLevel" : 4,
-          "image" : "humanoid/dummyhead.png"
-        }
-      },
-      "dummyBody" : {
-        "properties" : {
-          "centered" : false,
-          "offset" : [0, 0.125],
-          "zLevel" : 5,
-          "image" : "humanoid/dummybody.png"
-        }
-      },
-      "legs" : {
-        "properties" : {
-          "centered" : false,
-          "offset" : [0, 0.125],
-          "zLevel" : 6
-        },
-
-        "partStates" : {
-          "legs" : {
-            "show" : {
+            },
+            "looted" : {
               "properties" : {
-                "image" : "<frameSet>:idle.1<directives>"
-              }
-            }
-          }
-        }
-      },
-      "body" : {
-        "properties" : {
-          "centered" : false,
-          "offset" : [0, 0.125],
-          "zLevel" : 7
-        },
-
-        "partStates" : {
-          "chest" : {
-            "show" : {
-              "properties" : {
-                "image" : "<frameSet>:idle.1<directives>"
-              }
-            }
-          }
-        }
-      },
-      "head" : {
-        "properties" : {
-          "centered" : false,
-          "offset" : [0, 0.125],
-          "zLevel" : 8
-        },
-
-        "partStates" : {
-          "head" : {
-            "show" : {
-              "properties" : {
-                "image" : "<frameSet>:normal<directives>"
-              }
-            }
-          }
-        }
-      },
-      "dummyFrontArm" : {
-        "properties" : {
-          "centered" : false,
-          "offset" : [0, 0.125],
-          "zLevel" : 9,
-          "image" : "humanoid/dummyfrontarm.png"
-        }
-      },
-      "frontSleeve" : {
-        "properties" : {
-          "centered" : false,
-          "offset" : [0, 0.125],
-          "zLevel" : 10
-        },
-
-        "partStates" : {
-          "chest" : {
-            "show" : {
-              "properties" : {
-                "image" : "<frameSet>:idle.1<directives>"
+                "image" : "neb-tyrantancientmannequin.png:looted"
               }
             }
           }

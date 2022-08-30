@@ -7,7 +7,7 @@
 	  "dungeonWorld" : "neb-tyrantsdomain",
 	  "seed" : 4321,
 	  "spawningEnabled" : false,
-	  "beamUpRule" : "AnywhereWithWarning",
+	  "beamUpRule" : "Anywhere",
 	  "disableDeathDrops" : true,
 
 	  "skyParameters" : {

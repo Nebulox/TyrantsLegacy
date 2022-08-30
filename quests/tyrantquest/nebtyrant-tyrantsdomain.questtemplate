@@ -1,0 +1,58 @@
+{
+  "id" : "nebtyrant-tyrantsdomain",
+  "title" : "^orange;Domain of the Tyrant",
+  "text" : "Hello there, young one. Rumours of your achievements echoed in the air of this realm. ^green;Perhaps you would be interested in a domain lost to time?^white; A tip however, you will need to ^green;prove your strength^white; if you wish to enter.",
+  "completionText" : "I gathered what appears to be the vestaments of a long lost tyrant, splendid!",
+  "moneyRange" : [0, 0],
+  "rewards" : [
+    [ [ "neb-tyrantsreaper", 1 ], [ "neb-tyrantshead", 1 ] , [ "neb-tyrantschest", 1 ] , [ "neb-tyrantslegs", 1 ]  ]
+  ],
+
+  "updateDelta" : 10,
+  "script" : "/quests/scripts/nebtyrant-instance.lua",
+  "scriptConfig" : {
+    "portraits" : {
+      "questStarted" : {
+        "portrait" : [ {"image" : "/quests/outpost/mysterioustraderportrait.png"} ],
+        "title" : "The Trader"
+      },
+      "questComplete" : {
+        "default" : "player"
+      }
+    },
+
+    "descriptions" : {
+      "enterInstance" : "Converse with ^orange;the mysterious trader^reset;",
+      "findGoal" : "Find the lost treasure",
+	  "turnIn" : "Complete!"
+    },
+
+    "warpEntityUid" : "vaultkeytrader",
+    "warpAction" : "instanceworld:neb-tyrantsdomain",
+    "warpDialog" : "/interface/confirmation/teleportconfirmation.config:neb-tyrantsdomain",
+
+	"conditionConfig" : [
+	  {
+	    "type" : "message",
+		"message" : "openDoor",
+		"goalUid" : "neb-gerald",
+		"description" : "Prove your strength"
+	  },
+	  {
+	    "type" : "playerProperty",
+		"args" : ["neb-tyrantsReturn-hasSword"],
+		"goalUid" : "neb-tyrantsword",
+		"description" : "Collect the Tyrant's sword"
+	  },
+	  {
+	    "type" : "playerProperty",
+		"args" : ["neb-tyrantsReturn-hasArmour"],
+		"goalUid" : "neb-tyrantarmour",
+		"description" : "Collect the Tyrant's armour"
+	  }
+	],
+	
+    "indicateGoal" : true,
+    "trackGoalEntity" : true
+  }
+}
