@@ -23,13 +23,15 @@
 
     "metaBoundBox" : [-4, -4, 4, 4],
     "scale" : 1.0,
+	
+	"regen" : 175,
 
     "selfDamagePoly" : [ [1.0, 1.5],  [1.5, 1.0],  [1.5, -1.0],  [1.0, -1.5],  [-1.0, -1.5],  [-1.5, -1.0],  [-1.5, 1.0],  [-1.0, 1.5] ],
 
     "movementSettings" : {
       "gravityEnabled" : false,
       "collisionEnabled" : false,
-      "collisionPoly" : [ [0.25, 0.25], [-0.25, 0.25], [-0.25, -0.25], [0.25, -0.25]],
+      "collisionPoly" : [ [2, 2], [-2, 2], [-2, -2], [2, -2]],
 
       "physicsEffectCategories" : [ "boss" ]
     },

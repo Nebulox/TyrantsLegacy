@@ -16,9 +16,7 @@
         "portrait" : [ {"image" : "/quests/outpost/mysterioustraderportrait.png"} ],
         "title" : "The Trader"
       },
-      "questComplete" : {
-        "default" : "player"
-      }
+      "questComplete" : "player"
     },
 
     "descriptions" : {
@@ -52,7 +50,7 @@
 	  }
 	],
 	
-    "indicateGoal" : true,
+    "indicateGoals" : true,
     "trackGoalEntity" : true
   }
 }

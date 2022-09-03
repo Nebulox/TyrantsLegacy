@@ -13,7 +13,7 @@
 	"damageKind" : "firebroadsword",
 	
 	"spreadRadius" : 3,
-	"spreadEffect" : "neb-tyrantheal"
+	"spreadEffect" : "neb-inferno"
   },
   "defaultDuration" : 3,
 

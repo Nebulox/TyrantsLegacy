@@ -30,5 +30,5 @@
   "animationParts" : {
     "object" : "neb-tyrantswordaltar.png"
   },
-  "animationPosition" : [0, 0]
+  "animationPosition" : [-9, 0]
 }

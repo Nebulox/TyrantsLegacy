@@ -1,9 +1,15 @@
 function init()
   monster.setUniqueId(config.getParameter("uniqueId"))
+  local pos = mcontroller.position()
+  mcontroller.setPosition({pos[1] + 0.25, pos[2]})
+  monster.setDamageOnTouch(false)
 end
 
 function update(dt)
-  if #world.playerQuery(mcontroller.position(), 30, {order = "nearest"}) > 0 then
+  local playerCount = #world.playerQuery(mcontroller.position(), 30, {order = "nearest"})
+  local regenRate = config.getParameter("regen", 125) * (playerCount + (playerCount * 0.1) - 0.1) 
+  status.modifyResource("health", regenRate)
+  if playerCount > 0 then
 	monster.setDamageBar("Special")
   else
 	monster.setDamageBar("None")

@@ -11,7 +11,6 @@ function init()
 
   self.goalTrigger = config.getParameter("goalTrigger", "proximity")
 
-  self.goalEntities = config.getParameter("goalEntityUids", {})
   self.trackGoalEntity = config.getParameter("trackGoalEntity", false)
   self.indicateGoals = config.getParameter("indicateGoals", false)
   
@@ -108,14 +107,21 @@ function findGoal(dt)
   
   quest.setIndicators({})
   if self.indicateGoals then
-    for x, entity in ipairs(self.goalEntities) do
-      quest.setParameter("goalEntity" .. x, {type = "entity", uniqueId = entity})
-      quest.setIndicators({"goalEntity" .. x})
-    end
+    quest.setIndicators(setupIndicators())
   end
   
   quest.setObjectiveList(updateConditions())
 
+  local warpAction = "outpost"
+  if type(self.warpAction) == "string" then
+	warpAction = self.warpAction
+  elseif type(self.warpAction) == "table" then
+	warpAction = self.warpAction[1]
+  end
+  local delim = ":"
+
+  local targetDungeon = warpAction:sub(warpAction:find(delim, 1, true) + 1, -1)
+  
   while storage.stage == 2 do
 	local questValid, target = questValidAndNextTarget()
 	
@@ -133,7 +139,7 @@ function findGoal(dt)
 	
 	if questValid then
 	  storage.stage = 3
-	elseif target == nil then
+	elseif world.type() ~= targetDungeon then
 	  storage.stage = 1
 	end
 
@@ -141,6 +147,18 @@ function findGoal(dt)
   end
 
   self.state:set(self.stages[storage.stage])
+end
+
+function setupIndicators()
+  local indicatorList = {}
+  for _, conditionInfo in ipairs(self.conditionConfig) do
+    local param = "goalEntity" .. conditionInfo.goalUid
+    table.insert(indicatorList, param)
+  
+    local indicator = {type = "entity", uniqueId = conditionInfo.goalUid}
+    quest.setParameter(param, indicator)
+  end
+  return indicatorList
 end
 
 function buildConditions()
