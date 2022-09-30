@@ -19,12 +19,75 @@
     ],
     "renderLayer" : "Projectile+1",
 
+	"regenRate" : 70,
+
+	"banterChance" : 0.45,
+	"banterTimeout" : 1,
+	"battleBanter" : [
+	  //Base
+	  "You are a pansy, mate.",
+	  "A priest who is also a slime can hit harder than you.",
+	  "Go off and actually get better for once.",
+	  "I know an economics student who could do this.",
+	  "Try babysitting, you are so gentle that you'd be renown for it.",
+	  "A detective could kill you with their bare fists.",
+	  "You're supposed to be the savior of the universe? Could've fooled me.",
+	  "The tyrant king wouldn't even need his armor to beat you.",
+	  "Pay to win? Is that your strategy? Because you sure as hell invested into failure.",
+	  "You're quite the anomaly. Scientists would be fumbled on how unnaturally weak you are.", 
+	  "Oh damn I felt that, wait that was just the winds, nevermind.",
+	  "The adage of \"git gud\" has never been so fitting in this situation here.",
+	  "Facing you is so boring, you might actually kill me with it.",
+	  "Honestly floating here is more of a challenge than you.",
+	  "You are so pathetic, stepping on a tiny pebble does more damage.",
+	  "Wake me up once you decide to pose a real challenge. I'll wait.",
+	  
+	  //Neb
+	  "You hit like a truck, a toy truck.",
+	  "Is that a sword or a stick you're hitting me with?",
+	  "I ascended beyond your control, or was that all your intention?",
+	  
+	  //Tea-Loving Lad
+	  "You move like a slug and hit like a, uh, slug.",
+	  "Are you trying to trim my hair or something? How utterly pointless, I do not possess any hair.",
+	  "This is a fight you cannot win",
+	  
+	  //Silver Sokolova
+	  "Are you shooting marshmallows at me?",
+	  "My grandmother hits harder than you.",
+	  "Nice marshmallow shooter. Did you build it at summer camp?",
+	  "That was a rather hard pat. Oh? It was an attack? Really now?",
+	  "Am I going to die a death of a thousand cuts?",
+	  "At this rate, you'll starve to death before you kill me.",
+	  
+	  //Spartan the Avatar
+	  "Huh, I thought you'd be stronger",
+	
+	  //Melohi
+	  "Are you done scratching my back yet? I'd like you to trim my nails too",
+	  
+	  //Loopers
+	  "I expected a battle of wits, yet my opponent seems unarmed!",
+	  "Skill Issue.",
+	  "I AM THE WALL!",
+	  
+	  //Bread
+	  "My dad's belt hits harder than you.",
+	  
+	  //Echo
+	  "Insanity is repeating the same process over and over again while hoping for different results. And you, my friend, are either insane or stupid beyond comprehension.",
+	  
+	  //Raiizy
+	  "Ew, have some decency, cover that up! ...What do you mean that's a sword?",
+	  "EXCUSE ME, I AM IN ABSOLUTELY NO NEED FOR MEDICAL ATTENTION!"
+	],
+
     "touchDamage" : {},
 
     "metaBoundBox" : [-4, -4, 4, 4],
     "scale" : 1.0,
 	
-	"regen" : 175,
+	"regen" : 125,
 
     "selfDamagePoly" : [ [1.0, 1.5],  [1.5, 1.0],  [1.5, -1.0],  [1.0, -1.5],  [-1.0, -1.5],  [-1.5, -1.0],  [-1.5, 1.0],  [-1.0, 1.5] ],
 
