@@ -12,15 +12,15 @@
   "maleFrames" : "pants.png",
   "femaleFrames" : "pants.png",
 
-  "level" : 6,
+  "level" : 7,
   "leveledStatusEffects" : [
     {
-      "levelFunction" : "manipulatorArmorLevelPowerMultiplierMultiplier",
+      "levelFunction" : "separatorArmorLevelPowerMultiplierMultiplier",
       "stat" : "powerMultiplier",
-      "baseMultiplier" : 1.155
+      "baseMultiplier" : 1.1285714
     },
     {
-      "levelFunction" : "acceleratorArmorLevelProtectionMultiplier",
+      "levelFunction" : "separatorArmorLevelProtectionMultiplier",
       "stat" : "protection",
       "amount" : 0.2
     },
@@ -32,7 +32,7 @@
     {
       "levelFunction" : "separatorArmorLevelMaxHealthMultiplier",
       "stat" : "maxHealth",
-      "amount" : 7.14289
+      "amount" : 3
     }
   ],
   
@@ -43,34 +43,20 @@
   "itemTags" : [ "tier7armour", "nebulox" ],
 
   "colorOptions" : [
-	//Colours go from LIGHT to DARK - LIGHT/MEDIUM/DARK
-	
-	//DEFAULT - NO DYE
-	/* 0- BROWN LEATHER */
-    { "e0975c" : "A3907A", "a85636" : "756553", "6f2919" : "453826" },
+	//Colours go from LIGHT to DARKEST - LIGHT/MEDIUM/DARK/DARKEST
+    { "ffca8a" : "FFE998", "e0975c" : "E1A361", "a85636" : "AD651E", "6f2919" : "54281E" }, //DEFAULT, Gold
 	
 	//DYE COLOURS
-    /* 1- BLACK */
-    { "e0975c" : "6D6862", "a85636" : "494643", "6f2919" : "262523" },
-    /* 2- GREY - FADED BLUE */
-    { "e0975c" : "756A87", "a85636" : "5B5466", "6f2919" : "36303C" },
-    /* 3- WHITE */
-    { "e0975c" : "D1C7BC", "a85636" : "D1C7BC", "6f2919" : "6B6660" },
-    /* 4- RED */
-    { "e0975c" : "C94D2E", "a85636" : "993A23", "6f2919" : "632616" },
-    /* 5- ORANGE */
-    { "e0975c" : "FF7220", "a85636" : "BA3B1F", "6f2919" : "89370B" },
-    /* 6- YELLOW */
-    { "e0975c" : "FFA02B", "a85636" : "B76B0E", "6f2919" : "724309" },
-    /* 7- GREEN */
-    { "e0975c" : "4AB542", "a85636" : "2E7029", "6f2919" : "153513" },
-    /* 8- BLUE */
-    { "e0975c" : "3E4DAA", "a85636" : "293470", "6f2919" : "131835" },
-    /* 9- PURPLE */
-    { "e0975c" : "7D42B5", "a85636" : "4D2970", "6f2919" : "251335" },
-    /* 10- PINK */
-    { "e0975c" : "D13BB7", "a85636" : "812570", "6f2919" : "3E1235" },
-    /* 11- BROWN */
-    { "e0975c" : "C1A57C", "a85636" : "7C6A4F", "6f2919" : "44392C" }
+    { "ffca8a" : "656565", "e0975c" : "494949", "a85636" : "333333", "6f2919" : "1F1F1F" },	//Black
+    { "ffca8a" : "9A9A9A", "e0975c" : "6F6F6F", "a85636" : "505050", "6f2919" : "323232" },	//Grey
+    { "ffca8a" : "B4B4B4", "e0975c" : "808080", "a85636" : "595959", "6f2919" : "343434" },	//White
+    { "ffca8a" : "95524D", "e0975c" : "693D39", "a85636" : "4C2929", "6f2919" : "2C1B1A" },	//Red
+    { "ffca8a" : "9B6F45", "e0975c" : "6D5033", "a85636" : "503825", "6f2919" : "2E2118" },	//Orange
+    { "ffca8a" : "96985B", "e0975c" : "686A41", "a85636" : "4E4E30", "6f2919" : "2D2C1D" },	//Yellow
+    { "ffca8a" : "7A916A", "e0975c" : "56664C", "a85636" : "404A37", "6f2919" : "262B21" },	//Green
+    { "ffca8a" : "6F788B", "e0975c" : "4F5562", "a85636" : "393E47", "6f2919" : "22252A" },	//Blue
+    { "ffca8a" : "836896", "e0975c" : "5E4B6A", "a85636" : "42364D", "6f2919" : "27202D" },	//Purple
+    { "ffca8a" : "966894", "e0975c" : "6A4B68", "a85636" : "4D364D", "6f2919" : "2D202D" },	//Pink
+    { "ffca8a" : "9C8B68", "e0975c" : "6E634B", "a85636" : "504736", "6f2919" : "2F2920" }	//Brown
   ]
 }
