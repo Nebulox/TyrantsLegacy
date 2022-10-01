@@ -1,0 +1,73 @@
+{
+  "itemName" : "neb-tyrantstoaster",
+  "price" : 1500,
+  "inventoryIcon" : "neb-tyrantstoastericon.png",
+  "maxStack" : 1,
+  "rarity" : "Legendary",
+  "description" : "Found in the tyrants apartment. What a strange apparatus.",
+  "shortdescription" : "Tyrant's Toaster",
+  "category" : "uniqueWeapon",
+  "twoHanded" : true,
+  "itemTags" : ["weapon","ranged","shotgun"],
+  "level" : 6,
+
+  "animation" : "neb-tyrantstoaster.animation",
+  "animationParts" : {
+    "middle" : "neb-tyrantstoaster.png",
+	"middleFullbright" : "neb-tyrantstoasterfullbright.png",
+    "muzzleFlash" : "/items/active/weapons/ranged/unrand/doomcannon/doommuzzleflash.png"
+  },
+
+  "baseOffset" : [0, 0],
+  "muzzleOffset" : [0.5, 0],
+
+  "scripts" : ["/items/active/weapons/ranged/gun.lua"],
+
+  "elementalType" : "physical",
+
+  "primaryAbility" : {
+    "scripts" : ["/items/active/weapons/ranged/gunfire.lua"],
+    "class" : "GunFire",
+
+    "fireTime" : 0.6,
+    "baseDps" : 9,
+    "energyUsage" : 30,
+    "inaccuracy" : 0.01,
+
+    "projectileCount" : 1,
+    "fireType" : "burst",
+	"burstCount" : 2,
+	"burstTime" : 0.125,
+
+    "projectileType" : "nebtyrantdoomtoast",
+    "projectileParameters" : {
+      "knockback" : 10
+    },
+
+    "stances" : {
+      "idle" : {
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : true,
+
+        "allowRotate" : true,
+        "allowFlip" : true
+      },
+      "fire" : {
+        "duration" : 0.1,
+        "armRotation" : 1,
+        "weaponRotation" : 1,
+        "twoHanded" : true,
+
+        "animationStates" : {
+          "body" : "reload"
+        },
+
+        "allowRotate" : true,
+        "allowFlip" : false
+      }
+    }
+  },
+
+  "builder" : "/items/buildscripts/buildunrandweapon.lua"
+}

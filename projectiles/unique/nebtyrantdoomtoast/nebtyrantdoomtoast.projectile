@@ -1,0 +1,21 @@
+{
+  "projectileName" : "nebtyrantdoomtoast",
+  "physics" : "arrownosticky",
+  "bounces" : 0,
+  "image" : "nebtyrantdoomtoast.png",
+  "fullbright" : true,
+  "flippable" : true,
+  "animationCycle" : 1,
+  "frameNumber" : 1,
+  "power" : 50,
+  "speed" : 45,
+  "actionOnReap" : [
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/doomexplosion/doomexplosion.config"
+    }
+  ],
+  "lightColor" : [150, 75, 75],
+  "damageKind" : "plasmabullet",
+  "statusEffects" : ["l6doomed"]
+}

@@ -7,7 +7,7 @@ function init()
   monster.setDamageOnTouch(false)
   
   self.damageTaken = damageListener("damageTaken", function(notifications)
-    for _,notification in pairs(notifications) do
+    for _, notification in pairs(notifications) do
       if notification.healthLost > 0 then
 		if self.banterTimer == 0 and math.random() > config.getParameter("banterChance", 0.5) then
 		  engageBanter()
@@ -16,7 +16,7 @@ function init()
     end
   end)
   
-  self.banterTimer = config.getParameter("banterTimeout", 1)
+  self.banterTimer = 0
 end
 
 function update(dt)
@@ -32,6 +32,7 @@ function update(dt)
   end
   
   --Banter
+  self.damageTaken:update()
   self.banterTimer = math.max(0, self.banterTimer - dt)
 end
 

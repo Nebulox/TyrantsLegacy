@@ -19,9 +19,9 @@
     ],
     "renderLayer" : "Projectile+1",
 
-	"regenRate" : 70,
+	"regenRate" : 60,
 
-	"banterChance" : 0.45,
+	"banterChance" : 0.275,
 	"banterTimeout" : 1,
 	"battleBanter" : [
 	  //Base
@@ -46,11 +46,11 @@
 	  "You hit like a truck, a toy truck.",
 	  "Is that a sword or a stick you're hitting me with?",
 	  "I ascended beyond your control, or was that all your intention?",
+	  "This is a fight you cannot win!",
 	  
 	  //Tea-Loving Lad
 	  "You move like a slug and hit like a, uh, slug.",
 	  "Are you trying to trim my hair or something? How utterly pointless, I do not possess any hair.",
-	  "This is a fight you cannot win",
 	  
 	  //Silver Sokolova
 	  "Are you shooting marshmallows at me?",
@@ -64,7 +64,7 @@
 	  "Huh, I thought you'd be stronger",
 	
 	  //Melohi
-	  "Are you done scratching my back yet? I'd like you to trim my nails too",
+	  "Are you done scratching my back yet? I'd like you to trim my nails too.",
 	  
 	  //Loopers
 	  "I expected a battle of wits, yet my opponent seems unarmed!",
@@ -79,7 +79,83 @@
 	  
 	  //Raiizy
 	  "Ew, have some decency, cover that up! ...What do you mean that's a sword?",
-	  "EXCUSE ME, I AM IN ABSOLUTELY NO NEED FOR MEDICAL ATTENTION!"
+	  "EXCUSE ME, I AM IN ABSOLUTELY NO NEED FOR MEDICAL ATTENTION!",
+	  "Mate, if you protect as well as you attack, I can see why the Protectorate got destroyed so violently immediately after you graduated.",
+	  
+	  //Lord Bored
+	  "Have you tried using something other than a fabricated stick?",
+	  "That almost tickles.",
+	  "Mortal, fleeting. You are no match for me.",
+	  "Not even close.",
+	  "You seem to have forgotten getting an actual weapon.",
+	  "You can walk away now. It doesn't hurt, go on.",
+	  "*yawn* Are you done yet?",
+	  "You hit like my grandmother's grandmother's great grandmother!",
+	  
+	  //Toast
+	  "Come on, didn't you learn anything from your father?",
+	  "Hit me a bit more right between the shoulders, I've had an ache there for weeks.",
+	  "Are you trying to kill me with the sword or with the disappointment?",
+	  "I've been hurt more by a toddler with a pool noodle.",
+	  "Think you might have given me a paper cut with that one.",
+	  "Oh damn, I almost felt that one.",
+  	  "You need a running start or something?",
+	  "Give me the sword, let me show you how it's done.",
+	  "I think you'd have better luck falling on me.",
+	  "Nanomachines, son, they'd harden if you were causing me physical trauma.",
+	  "I'd be more scared of a Care Bear Stare than whatever it is you're trying to accomplish.",
+	  "Have you tried asking a preschooler for advice?",
+	  "This is all a bit and you're about to actually hurt me, right?",
+	  "I've been in tea parties more painful than this.",
+	  "If this is all you can do, you should really talk to a doctor about it.",
+	  "Go hit the gym and come back when you can actually use that thing.",
+	  
+	  //Darkrium
+	  "Oh you're here. I didn't even notice it was you. Thought it was some other weak twat, but you're definitely weaker.",
+	  
+	  //Yurithura
+	  "Is it even in yet?",
+	  
+	  //Catastrophic
+	  "That's a good massage.",
+	  "This is taking a while, bake me some cookies while you're at it?",
+	  "A POWERFUL BLOW! Is what I would have said if you did something worth my while.",
+	  "Ok, now pose.SNAP. Gonna share this in my socials.",
+	  "You bore me so much I ... Iz ... Zzzz",
+	  "ERROR !!! FUNCTION:DAMAGE//STATUS:NOT FOUND",
+	  "How did you manage to be so weak? Lollygagging?",
+	  "Ouch, got cramps, hold up ... ... ... Ok you can keep going now",
+	  "Here are some synonyms for Weak: frail, puny, feeble, YOU",
+	  "You scare me as much as a week old baby, and hit as hard as one.",
+	  "Not an eldritch baby mind you, those are actually terrifying",
+	  "Small, small, small again, when will you deal big numbers?",
+	  "It's like a cassino with me, you always end up losing" ,
+	  "With an infinite amount of possibilities how did I end up with the likes of you?",
+	  "Hit me like a MAN! Or, woman... person? Just forget I said anything.",
+	  "You seem to be lacking strength, as well as speed, or intelligence... you lack a lot actually.",
+	  "Want to hear a joke? You.",
+	  "This feels like percussive maintenance",
+	  "I expected more, though from you there isn't much to expect.",
+	  "Pathetic, to think you could ever stand a chance.",
+	  "Here again? So soon? Don't you have anything better to do?",
+	  "Could there be more to this other than mediocrity?",
+	  "Booooooooriiiiing",
+	  "Listen kid, I ain't got all day.",
+	  "It will take over a 1000 years before you could ever hope of defeating me!",
+	  "Foolish, to think you are powerful enough.",
+
+	  //Robotglitch
+	  "I have met literal babies that left more scratches than you did.",
+	  "Go hit the gym, buddy. I'm sure it'll probably rank up those noodle arms of yours.",
+	  
+	  //SPNKr
+	  "Are you trying to tickle me?!",
+	  
+	  //Fluff
+	  "You fight like a playful kitten, cute and harmless.",
+	  
+	  //JaceEthaniel
+	  "Oh, yea, right there... yea... That's the spot... Mm.. Thanks, I've had that itch for ages."
 	],
 
     "touchDamage" : {},
