@@ -64,7 +64,7 @@
           "centered" : true,
           "fullbright" : true,
 		  "zLevel" : 2,
-          "offset" : [0, 0.5], // x offset is set dynamically
+          "offset" : [0, 0], // x offset is set dynamically
           "transformationGroups" : ["weapon"]
         },
         "partStates" : {
