@@ -19,9 +19,9 @@
     ],
     "renderLayer" : "Projectile+1",
 
-	"regenRate" : 60,
+	"regenRate" : 65,
 
-	"banterChance" : 0.275,
+	"banterChance" : 0.05,
 	"banterTimeout" : 1,
 	"battleBanter" : [
 	  //Base
@@ -120,7 +120,7 @@
 	  "That's a good massage.",
 	  "This is taking a while, bake me some cookies while you're at it?",
 	  "A POWERFUL BLOW! Is what I would have said if you did something worth my while.",
-	  "Ok, now pose.SNAP. Gonna share this in my socials.",
+	  "Ok, now pose. SNAP. Gonna share this in my socials.",
 	  "You bore me so much I ... Iz ... Zzzz",
 	  "ERROR !!! FUNCTION:DAMAGE//STATUS:NOT FOUND",
 	  "How did you manage to be so weak? Lollygagging?",
@@ -162,8 +162,6 @@
 
     "metaBoundBox" : [-4, -4, 4, 4],
     "scale" : 1.0,
-	
-	"regen" : 125,
 
     "selfDamagePoly" : [ [1.0, 1.5],  [1.5, 1.0],  [1.5, -1.0],  [1.0, -1.5],  [-1.0, -1.5],  [-1.5, -1.0],  [-1.5, 1.0],  [-1.0, 1.5] ],
 
@@ -212,13 +210,13 @@
           "baseValue" : 9
         },
         "maxHealth" : {
-          "baseValue" : 1500
+          "baseValue" : 350
         },
         "protection" : {
           "baseValue" : 0.0
         },
         "healthRegen" : {
-          "baseValue" : 175
+          "baseValue" : 0
         },
         "powerMultiplier" : {
           "baseValue" : 1.0
