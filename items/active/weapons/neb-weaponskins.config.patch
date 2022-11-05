@@ -1,0 +1,40 @@
+[
+  {
+    "op": "add",
+    "path": "/weaponSkins/neb-tyrantsreaper",
+    "value": {
+      "sunrisen": {
+	    "skinName" : "Sunrisen",
+	    "unlockDescription" : "Find the toaster.",
+        "prerequisiteQuests": [],
+	  
+        "skinConfig": {
+          "description": "Refined, sharpened, and optimized, truly the damage caused would make history.",
+          "shortdescription": "Sunrisen",
+		  
+          "inventoryIcon": "skins/neb-tyrantsreaper-neb-sunrisen.png",
+          "animationParts": {
+			"weapon" : "skins/neb-tyrantsreaper-neb-sunrisen.png",
+			"weaponFullbright" : "skins/neb-tyrantsreaperglow-neb-sunrisen.png"
+          }
+        }
+      },
+      "touchofcalamity": {
+	    "skinName" : "Touch of Calamity",
+	    "unlockDescription" : "Kill Gerald in under 10 seconds.",
+        "prerequisiteQuests": [],
+	  
+        "skinConfig": {
+          "description": "For when your author, your creator, gives you a finishing touch.",
+          "shortdescription": "Touch of Calamity",
+		  
+          "inventoryIcon": "skins/neb-tyrantsreaper-neb-touchofcalamity.png",
+          "animationParts": {
+			"weapon" : "skins/neb-tyrantsreaper-neb-touchofcalamity.png",
+			"weaponFullbright" : "skins/neb-tyrantsreaperglow-neb-touchofcalamity.png"
+          }
+        }
+      }
+    }
+  }
+]
