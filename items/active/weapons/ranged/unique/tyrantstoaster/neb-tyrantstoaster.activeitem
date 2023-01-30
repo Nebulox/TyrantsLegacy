@@ -1,6 +1,6 @@
 {
   "itemName" : "neb-tyrantstoaster",
-  "price" : 1500,
+  "price" : 0,
   "inventoryIcon" : "neb-tyrantstoastericon.png",
   "maxStack" : 1,
   "rarity" : "Legendary",

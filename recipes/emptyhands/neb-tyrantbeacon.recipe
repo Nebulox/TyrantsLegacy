@@ -1,0 +1,11 @@
+{
+  "input" : [  
+    { "item" : "corefragmentore", "count" : 10 },
+    { "item" : "petalblue", "count" : 15 }
+  ],
+  "output" : {
+    "item" : "neb-tyrantbeacon",
+    "count" : 1
+  },
+  "groups" : [ "plain", "all", "other" ]
+}

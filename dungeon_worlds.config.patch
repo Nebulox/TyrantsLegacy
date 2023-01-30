@@ -8,13 +8,13 @@
       "gravity" : 80,
 	  "weatherPool" : [
 	  ],
-      "worldSize" : [2000, 2000],
-      "dungeonBaseHeight" : 2000,
-	  "dungeonSurfaceHeight" : 1000,
-      "ambientLightLevel" : [32, 32, 32],
+      "worldSize" : [1000, 500],
+      "dungeonBaseHeight" : 500,
+	  "dungeonSurfaceHeight" : 200,
+      "ambientLightLevel" : [0, 0, 0],
       "biome" : "volcanic",
       "ambientNoises" : "/sfx/environmental/space_loop4.ogg",
-      "musicTrack" : "/music/lava-exploration2.ogg",
+      "musicTrack" : "/music/neb-loib-a_message.ogg",
       "environmentStatusEffects" : ["dontstarve"]
     }
   }

@@ -1,0 +1,26 @@
+{
+  "itemName" : "neb-tyrantbeacon",
+  "level" : 1,
+  "fixedLevel" : false,
+  "price" : 250,
+  "maxStack" : 1,
+  "rarity" : "legendary",
+  "description" : "A strange ancient device that can take you to the ^red;Tyrant's Domain.",
+  "shortdescription" : "Domain Beacon",
+  "tooltipKind" : "base",
+  "category" : "mysteriousReward",
+  "twoHanded" : true,
+
+  "inventoryIcon" : "neb-tyrantbeaconicon.png",
+  "animation" : "neb-tyrantbeacon.animation",
+  "animationParts" : {
+    "beacon" : "neb-tyrantbeacon.png"
+  },
+  "animationCustom" : {},
+  
+  "scripts" : ["neb-tyrantbeacon.lua"],
+
+  "warpAction" : "instanceworld:neb-tyrantsdomain",
+
+  "fireOffset" : [1.0, 0.0]
+}

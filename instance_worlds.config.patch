@@ -18,17 +18,17 @@
 	  
 	  "skyType" : "atmospheric",
 	  "skyColoring" : {
-		"mainColor" : [255, 255, 255],
+		"mainColor" : [0, 0, 0],
 
-		"morningColors" : [ [115, 224, 255], [255, 255, 255] ],
-		"dayColors" : [ [115, 224, 255], [255, 255, 255] ],
-		"eveningColors" : [ [115, 224, 255], [255, 255, 255] ],
-		"nightColors" : [ [115, 224, 255], [255, 255, 255] ],
+		"morningColors" : [ [0, 0, 0], [0, 0, 0] ],
+		"dayColors" : [ [0, 0, 0], [0, 0, 0] ],
+		"eveningColors" : [ [0, 0, 0], [0, 0, 0] ],
+		"nightColors" : [ [0, 0, 0], [0, 0, 0] ],
 
-		"morningLightColor" : [200, 200, 200],
-		"dayLightColor" : [200, 200, 200],
-		"eveningLightColor" : [200, 200, 200],
-		"nightLightColor" : [200, 200, 200]
+		"morningLightColor" : [0, 0, 0],
+		"dayLightColor" : [0, 0, 0],
+		"eveningLightColor" : [0, 0, 0],
+		"nightLightColor" : [0, 0, 0]
 	  },
 	  
 	  "horizonImages" : [ ]

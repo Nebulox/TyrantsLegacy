@@ -1,0 +1,24 @@
+[
+  {
+    "op": "add",
+    "path": "/neb-tyrantmeaningfulstatue",
+    "value": [
+      [
+        0,
+        {
+          "pool": [
+            {
+              "weight": 1,
+              "item": [
+                "neb-tyrantmeaningfulalatar",
+                1
+              ]
+            }
+          ],
+          "poolRounds": 1,
+          "allowDuplication": false
+        }
+      ]
+    ]
+  }
+]

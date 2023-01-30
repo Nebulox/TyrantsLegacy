@@ -1,0 +1,49 @@
+{
+  "id" : "nebtyrant-tyrantsdomainvisit",
+  "title" : "^orange;Domain of the Tyrant",
+  "text" : "Hello there, young one. Rumours of your achievements echoed in the air of this realm. ^green;Perhaps you would be interested in a domain lost to time?^white; It is known that you will need to ^green;prove your strength^white; if you wish to enter.",
+  "completionText" : "Seek.",
+  "moneyRange" : [0, 500],
+  "rewards" : [
+    [ [ "money", 1000 ]  ]
+  ],
+  "showAcceptDialog" : true,
+  "showCompleteDialog" : false,
+
+  "canBeAbandoned" : false,
+  "updateDelta" : 10,
+  "script" : "/quests/scripts/nebtyrant-instance.lua",
+  "scriptConfig" : {
+    "portraits" : {
+      "questStarted" : {
+        "portrait" : [ {"image" : "/quests/outpost/mysterioustraderportrait.png"} ],
+        "title" : "The Trader"
+      },
+      "questComplete" : "player"
+    },
+
+    "descriptions" : {
+      "enterInstance" : "Converse with ^orange;the mysterious trader^reset;",
+      "findGoal" : "Find the lost treasure",
+	  "turnIn" : "Complete!"
+    },
+	"followUp" : "nebtyrant-tyrantsdomain",
+
+    "warpEntityUid" : "vaultkeytrader",
+    "warpAction" : "instanceworld:neb-tyrantsdomain",
+    "warpDialog" : "/interface/confirmation/teleportconfirmation.config:neb-tyrantsdomain",
+
+	"conditionConfig" : [
+	  {
+	    "type" : "targetDungeon",
+		"goalUid" : "vaultkeytrader",
+		"description" : "Visit the domain."
+	  }
+	],
+
+    "giveBlueprints" : [ "neb-tyrantbeacon" ],
+	
+    "indicateGoals" : true,
+    "trackGoalEntity" : true
+  }
+}

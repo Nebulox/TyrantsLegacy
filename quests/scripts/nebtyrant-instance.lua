@@ -5,7 +5,7 @@ require "/quests/scripts/portraits.lua"
 function init()
   self.descriptions = config.getParameter("descriptions")
 
-  self.warpEntity = config.getParameter("warpEntityUid")
+  self.warpEntity = config.getParameter("warpEntityUid", false)
   self.warpAction = config.getParameter("warpAction")
   self.warpDialog = config.getParameter("warpDialog")
 
@@ -61,42 +61,52 @@ function enterInstance(dt)
   quest.setObjectiveList({
     {self.descriptions.enterInstance, false}
   })
-  quest.setParameter("warpentity", {type = "entity", uniqueId = self.warpEntity})
-  quest.setIndicators({"warpentity"})
+  if self.warpEntity then
+    quest.setParameter("warpentity", {type = "entity", uniqueId = self.warpEntity})
+    quest.setIndicators({"warpentity"})
 
-  self.onInteract = function(entityId)
-    if world.entityUniqueId(entityId) == self.warpEntity then
-      if not self.warpConfirmation then
-        local dialogConfig = root.assetJson(self.warpDialog)
-        dialogConfig.sourceEntityId = entityId
-        self.warpConfirmation = player.confirm(dialogConfig)
+    self.onInteract = function(entityId)
+      if world.entityUniqueId(entityId) == self.warpEntity then
+        if not self.warpConfirmation then
+          local dialogConfig = root.assetJson(self.warpDialog)
+          dialogConfig.sourceEntityId = entityId
+          self.warpConfirmation = player.confirm(dialogConfig)
+        end
+        return true
       end
-      return true
     end
-  end
-
-  local findWarpEntity = util.uniqueEntityTracker(self.warpEntity, 0.5)
-  local questValid, target = questValidAndNextTarget()
-  local currentGoalEntity = util.uniqueEntityTracker(target, 0.5)
-  while storage.stage == 1 do
-    questutil.pointCompassAt(findWarpEntity())
+ 
+    local findWarpEntity = util.uniqueEntityTracker(self.warpEntity, 0.5)
+    local questValid, target = questValidAndNextTarget()
+    local currentGoalEntity = util.uniqueEntityTracker(target, 0.5)
+    while storage.stage == 1 do
+      questutil.pointCompassAt(findWarpEntity())
 	
-    if currentGoalEntity() then
+      if currentGoalEntity() then
+        storage.stage = 2
+      end
+
+      if self.warpConfirmation and self.warpConfirmation:finished() then
+        if self.warpConfirmation:result() then
+          if type(self.warpAction) == "string" then
+            player.warp(self.warpAction, "beam")
+          elseif type(self.warpAction) == "table" then
+            player.warp(self.warpAction[1], self.warpAction[2], self.warpAction[3])
+          end
+        end
+        self.warpConfirmation = nil
+      end
+
+      coroutine.yield()
+    end
+  else
+    local targetDungeon = determineDungeon()
+    while world.type() ~= targetDungeon do
+      coroutine.yield()
+    end
+    if world.type() == targetDungeon then
       storage.stage = 2
     end
-
-    if self.warpConfirmation and self.warpConfirmation:finished() then
-      if self.warpConfirmation:result() then
-        if type(self.warpAction) == "string" then
-          player.warp(self.warpAction, "beam")
-        elseif type(self.warpAction) == "table" then
-          player.warp(self.warpAction[1], self.warpAction[2], self.warpAction[3])
-        end
-      end
-      self.warpConfirmation = nil
-    end
-
-    coroutine.yield()
   end
   
   self.state:set(self.stages[storage.stage])
@@ -112,15 +122,7 @@ function findGoal(dt)
   
   quest.setObjectiveList(updateConditions())
 
-  local warpAction = "outpost"
-  if type(self.warpAction) == "string" then
-	warpAction = self.warpAction
-  elseif type(self.warpAction) == "table" then
-	warpAction = self.warpAction[1]
-  end
-  local delim = ":"
-
-  local targetDungeon = warpAction:sub(warpAction:find(delim, 1, true) + 1, -1)
+  local targetDungeon = determineDungeon()
   
   while storage.stage == 2 do
 	local questValid, target = questValidAndNextTarget()
@@ -196,11 +198,14 @@ end
 function questValidAndNextTarget()
   local valid = true
   local target = nil
+  local targetDungeon = determineDungeon()
   for _, conditionInfo in pairs(self.conditionConfig) do
     if conditionInfo.type == "playerProperty" then
   	  valid = player.getProperty(table.unpack(conditionInfo.args))
 	elseif conditionInfo.type == "message" then
 	  valid = self[conditionInfo.goalUid .. "MessageReceived" .. conditionInfo.message] or false
+	elseif conditionInfo.type == "targetDungeon" then
+	  valid = (world.type() == targetDungeon)
 	end
 	
 	if not valid and not target then
@@ -208,6 +213,18 @@ function questValidAndNextTarget()
     end
   end
   return valid, target
+end
+
+function determineDungeon()
+  local warpAction = "outpost"
+  if type(self.warpAction) == "string" then
+	warpAction = self.warpAction
+  elseif type(self.warpAction) == "table" then
+	warpAction = self.warpAction[1]
+  end
+  local delim = ":"
+  
+  return warpAction:sub(warpAction:find(delim, 1, true) + 1, -1)
 end
 
 function turnIn()
