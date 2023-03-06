@@ -14,13 +14,7 @@
   "updateDelta" : 10,
   "script" : "/quests/scripts/nebtyrant-instance.lua",
   "scriptConfig" : {
-    "portraits" : {
-      "questStarted" : {
-        "portrait" : [ {"image" : "/quests/outpost/mysterioustraderportrait.png"} ],
-        "title" : "The Trader"
-      },
-      "questComplete" : "player"
-    },
+    "portraits" : {"default" : "player"},
 
     "descriptions" : {
       "enterInstance" : "Converse with ^orange;the mysterious trader^reset;",
